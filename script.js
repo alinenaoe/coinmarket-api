@@ -10,7 +10,6 @@ fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=$
     .then(api => {
         var texto = "";
         for(var i=0; i<10; i++) {
-            console.log(api.data[i])
             texto = texto +             
             `
                 <div class="media">
@@ -23,8 +22,8 @@ fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=$
                     >
                     <div>
                         <h5 class="mt-2">${api.data[i].name}</h5>
-                        <p>${api.data[i].symbol}</p>
-                        <p>${new Date(api.data[i].first_historical_data).toLocaleDateString()}</p>
+                        <p>Symbol: ${api.data[i].symbol}</p>
+                        <p>First historical data: ${new Date(api.data[i].first_historical_data).toLocaleDateString()}</p>
                     </div>
                 </div>
             `;

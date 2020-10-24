@@ -1,0 +1,21 @@
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#coins {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.media {
+    width: 280px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.media:hover {
+    background-color: aliceblue;
+}

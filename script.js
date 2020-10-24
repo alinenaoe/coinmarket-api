@@ -24,7 +24,7 @@ fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=$
                     <div>
                         <h5 class="mt-2">${api.data[i].name}</h5>
                         <p>${api.data[i].symbol}</p>
-                        <p>${api.data[i].first_historical_data}</p>
+                        <p>${new Date(api.data[i].first_historical_data).toLocaleDateString()}</p>
                     </div>
                 </div>
             `;
